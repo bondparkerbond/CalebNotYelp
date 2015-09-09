@@ -1,2 +1,18 @@
-<%= link_to 'NOT YELP', root_path %> | 
-<%= link_to "REVIEWS", posts_path %>
+ <nav>
+    <div class="nav-wrapper blue">
+      <a href="#!" class="brand-logo">NOT YELP!</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><%= link_to 'NOT YELP', root_path %> </li>
+        <li><%= link_to "REVIEWS", posts_path %></li>
+        <li><%= link_to 'LOG OUT', destroy_user_session_path, method: :delete %></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><%= link_to 'NOT YELP', root_path %> </li>
+        <li><%= link_to "REVIEWS", posts_path %></li>
+        <li><%= link_to 'LOG OUT', destroy_user_session_path, method: :delete %></li>
+      </ul>
+    </div>
+  </nav>
+        
+
