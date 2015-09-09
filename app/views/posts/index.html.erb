@@ -1,8 +1,9 @@
-<h1> Posts </h1>
-<p><%= link_to 'New Post', new_post_path %></p>
+<h1> Reviews </h1>
+<p><%= link_to 'New Review', new_post_path %></p>
 <% @posts.each do |post| %>
   <h2><%= post.title %></h2>
   <h3><%= post.username %></h3>
   <p><%= post.review %></p>
-  <%= link_to 'Show post', post_path(post) %>
+  <%= link_to 'Show Review', post_path(post) %> | 
+  <%= link_to 'Edit Review', edit_post_path(post) %>
 <% end %>
