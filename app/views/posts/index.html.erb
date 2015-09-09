@@ -1,10 +1,12 @@
+<div class = "center">
 <h1> Reviews </h1>
-<p><%= link_to 'New Review', new_post_path %></p>
-<% @posts.each do |post| %>
-  <h2><%= post.title %></h2>
-  <h3><%= post.username %></h3>
-  <p><%= post.review %></p>
-  <%= link_to 'Show Review', post_path(post) %> | 
-  <%= link_to 'Edit Review', edit_post_path(post) %> | 
-  <%= link_to 'Destroy Review', post, method: :delete %>
-<% end %>
+<h4><%= link_to 'New Review', new_post_path %></h4>
+  <% @posts.each do |post| %>
+    <hr /><h3><%= post.title %></h3><hr />
+    <h5>User: <%= post.username %></h5>
+    <p><%= post.review %></p>
+    <%= link_to 'Show Review', post_path(post) %> | 
+    <%= link_to 'Edit Review', edit_post_path(post) %> | 
+    <%= link_to 'Destroy Review', post, method: :delete %>
+  <% end %>
+</div>
